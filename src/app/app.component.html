@@ -1,22 +1,74 @@
-<div class="main">
-  
+<div class="main">  
   <div class="fade-in">
       <div style="text-align: center;">
       <h2>parcial</h2>
   </div>
   </div>
-  <div class="fade-in2">
+  <div class="container">
+    <div [hidden]="submitted">
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <div class="form-group">
+          <label for="libros">titulo</label>
+          <input type="text" class="form-control" id="name"
+                 [(ngModel)]="model" name="name"
+                 #name="ngModel">
+          </div>
+          <br>
+          <div class="container">
+            <div [hidden]="submitted">
+              <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                <div class="form-group">
+                  <label for="libros">referencia</label>
+                  <input type="text" class="form-control" id="name"
+                         [(ngModel)]="model" name="name"
+                         #name="ngModel">
+                  </div>
+                  <br>
+                  <div class="container">
+                    <div [hidden]="submitted">
+                      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                        <div class="form-group">
+                          <label for="libros">autor</label>
+                          <input type="text" class="form-control" id="name"
+                                 [(ngModel)]="model" name="name"
+                                 #name="ngModel">
+                          </div>
+                          <br>
+                          <div class="container">
+                            <div [hidden]="submitted">
+                              <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                <div class="form-group">
+                                  <label for="libros">precio</label>
+                                  <input type="text" class="form-control" id="name"
+                                         [(ngModel)]="model" name="name"
+                                         #name="ngModel">
+                                  </div>
+                                  <br>
+                                  <div class="container">
+                                    <div [hidden]="submitted">
+                                      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                        <div class="form-group">
+                                          <label for="libros">ubicacion</label>
+                                          <input type="text" class="form-control" id="name"
+                                                 [(ngModel)]="model" name="name"
+                                                 #name="ngModel">
+                                          </div>
+                                          <br>
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        &nbsp;&nbsp;
+        <button type="button" class="btn btn-default" (click)="newSubmit()">Reiniciar</button>
+      </form>
+    </div>
     <ul>
-    <li>Libro 1</li>
-    <li>Libro 2</li>
-    <li>Libro 3</li>
-  </ul>
-  <button>ingresar información</button>
+      <li *ngFor="let pow of item"> items </li>
+    </ul>
+    <br>
     <div style="text-align:center;">
       <p>Desarrollo Web</p>
       <p>Gabriela Luigi<p>
       <p>Pontificia Universidad Javeriana</p>
         <a routerLink="/Libros">libros</a>
       <br>
-     
+        <br>
+<div></div>
       
